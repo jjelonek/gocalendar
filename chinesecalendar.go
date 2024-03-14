@@ -263,7 +263,7 @@ func (c *Calendar) qiSinceWinterSolstice(year int) [16]float64 {
 func (c *Calendar) GregorianToLunar(year, month, day int) LunarDate {
 	t := time.Date(year,time.Month(month),day,0,0,0,0,c.loc)
 
-	return c.gregorianToLunar(t,false) // festival:false时不取农历节日
+	return c.gregorianToLunar(t,true) // festival:false时不取农历节日
 }
 
 // (*Calendar) gregorianToLunar 公历转农历
